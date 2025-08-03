@@ -132,17 +132,17 @@ if (isset($_POST["logout"])) {
                         <a class="dropdown-links" onclick="closeDropdown()" href="wiki/gettingstarted.php">
                             <span>Getting Started</span>
                         </a>
-                        <a class="dropdown-links" onclick="closeDropdown()" href="wiki/themes.php">
-                            <span>Changing Themes</span>
+                        <a class="dropdown-links" onclick="closeDropdown()" href="wiki/placeorders.php">
+                            <span>Placing Orders</span>
                         </a>
-                        <a class="dropdown-links" onclick="closeDropdown()" href="wiki/creatingatheme.php">
-                            <span>Creating A Theme</span>
+                        <a class="dropdown-links" onclick="closeDropdown()" href="wiki/manageaccount.php">
+                            <span>Managing Your Account</span>
                         </a>
                         <a class="dropdown-links" onclick="closeDropdown()" href="wiki/updateproducts.php">
                             <span>Updating Products</span>
                         </a>
-                        <a class="dropdown-links" onclick="closeDropdown()" href="wiki/ordering.php">
-                            <span>Checkout Guide</span>
+                        <a class="dropdown-links" onclick="closeDropdown()" href="wiki/manageusers.php">
+                            <span>Manage Users</span>
                         </a>
                     </div>
                 </div>

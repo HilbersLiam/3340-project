@@ -19,7 +19,6 @@ class Admin extends Dbh
     public function getTotals()
     {
         $this->totals['totalsales'] = 0;
-        // Join the orders table and users table by userid to retrieve all the information about the users orders.
         $query = "SELECT * FROM orders";
 
         // Fetch all information.
@@ -43,7 +42,6 @@ class Admin extends Dbh
     }
     public function getAllUsers()
     {
-        // Join the orders table and users table by userid to retrieve all the information about the users orders.
         $query = "SELECT * FROM users";
 
         // Fetch all information.
@@ -53,7 +51,6 @@ class Admin extends Dbh
     }
     public function getAllProducts()
     {
-        // Join the orders table and users table by userid to retrieve all the information about the users orders.
         $query = "SELECT * FROM products";
 
         // Fetch all information.
@@ -63,7 +60,6 @@ class Admin extends Dbh
     }
     public function getProduct($productid)
     {
-        // Join the orders table and users table by userid to retrieve all the information about the users orders.
         $query = "SELECT * FROM products WHERE productid = :productid";
 
         // Fetch all information.

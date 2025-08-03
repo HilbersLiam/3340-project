@@ -4,6 +4,7 @@ class CartDisplay extends CartDBHandler
 {
     public function renderCart($userid)
     {
+        // Function to render the cart by the userid with all the data
         $cart_items = $this->getCart($userid);
         foreach ($cart_items as $cart_item) { ?>
             <div class="cart-items">

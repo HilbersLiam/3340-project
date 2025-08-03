@@ -52,10 +52,10 @@ class Signup extends UserHandler
     private function insertUser()
     {
         // Hash the password
-        $this->hashPassword($this->password);
+        $password_hash = $this->hashPassword($this->password);
 
-        $query = "INSERT INTO users (first_name, last_name, email, password)
-                  VALUES(:first_name, :last_name, :email, :password_hash);";
+        $query = "INSERT INTO users (first_name, last_name, email, password, role, status)
+                  VALUES(:first_name, :last_name, :email, :password_hash, :role, :status);";
 
         // Use stmt's to prevent SQL injection. This is for security purposes and prevents anything malicious.
         // Connect to the database and prepare the query above.
@@ -65,12 +65,10 @@ class Signup extends UserHandler
         $stmt->bindParam(":first_name", $this->first_name);
         $stmt->bindParam(":last_name", $this->last_name);
         $stmt->bindParam(":email", $this->email);
-        $stmt->bindParam(":password_hash", $this->password_hash);
+        $stmt->bindParam(":password_hash", $password_hash);
+        $stmt->bindValue(":role", 'customer');
+        $stmt->bindValue(":status", 'active');
         $stmt->execute();
-
-        // Send the user to the login page.
-        header("Location: http://localhost/project/loginform.php");
-        exit();
     }
 
     // Function to create the user.

@@ -5,43 +5,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Wheelspire | Changing The Theme</title>
-
+    <title>Wheelspire | Manage Users</title>
     <!-- Stylesheets-->
     <link rel="icon" type="image/x-icon" href="Assets/Logo-darkmode.svg">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/navbar.css">
-
-
 </head>
 
 <body>
-  <?php include '../navbar.php'; ?>
-    <!-- Wiki guide on how to change the theme.-->
+    <?php include '../navbar.php'; ?>
+    <!-- Wiki guide on how creating a theme.-->
     <section class="wiki">
         <div class="center">
             <div class="wiki-container">
-                <p class="wiki-headers">How To Change The Theme</p>
+                <h2 class="wiki-headers">Admins - Managing Users</h2>
                 <p class="wiki-p">
-                    Changing the theme of the website is very easy, and will be saved for you when you come back!
+                    Once you have logged in as an admin. You can navigate to this url: <a class="wiki-links" href="admin/index.php">https://hilbersw.myweb.cs.uwindsor.ca/3340-Project/admin/index.php</a>.
                 </p>
                 <br>
-                <p class="wiki-headers">Step 1: </p>
+                <h3 class="wiki-headers">Step 1: Edit Users</h3>
                 <p class="wiki-p">
-                    Locate the theme switch dropdown on the right of the navigation bar. 
+                    Editing users is easy, you can change the users roles to either customer or admin by selecting the dropdown and it will automatically change when you select your option. If you want to disable a user, switch the dropdown from active to disabled.
                 </p>
                 <br>
-                <img class="theme-img" src="Assets/themes-tutorial.png" alt="Change The Theme"/>
-                <br>
-                <p class="wiki-headers">Step 2: </p>
-                <p class="wiki-p">
-                    Select the dropdown and choose one of the options. The options are: Lightmode, Darkmode, and Blue.
-                    When you select one of the themes, the website will change instantly and save the option for next time.
-                </p>
+                <img class="wiki-img" src="Assets/edit-users.png" alt="Screenshot showing users." />
+                <br><br>
             </div>
         </div>
     </section>
-   <?php include '../footer.php'; ?>
+    <?php include '../footer.php'; ?>
 </body>
 
 </html>

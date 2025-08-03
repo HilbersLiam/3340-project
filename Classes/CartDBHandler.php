@@ -25,7 +25,7 @@ class CartDBHandler extends Dbh
         $stmt->bindParam(":option", $this->option);
         $stmt->execute();
     }
-
+        // Function to get the cart by userid
     public function getCart($userid)
     {
         $query = "SELECT cart.quantity, cart.option, products.productid, products.price, products.name, products.price, products.image_url
@@ -41,6 +41,7 @@ class CartDBHandler extends Dbh
         return $this->cartResults;
     }
 
+    // Function to clear the cart
     public function clearEntireCart($userid)
     {
         $query = "DELETE FROM cart WHERE userid = :userid;";
@@ -48,14 +49,7 @@ class CartDBHandler extends Dbh
         $stmt->bindParam(":userid", $userid);
         $stmt->execute();
     }
-    public function removeSingleItem($userid, $productid)
-    {
-        $query = "DELETE FROM cart WHERE userid = :userid AND productid = :productid;";
-        $stmt = $this->connect()->prepare($query);
-        $stmt->bindParam(":userid", $userid);
-        $stmt->bindParam(":productid", $productid);
-        $stmt->execute();
-    }
+
 
     public function countCart()
     {

@@ -189,6 +189,7 @@ body.blue {
 }
 
 .products-link{
+    text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -211,6 +212,7 @@ body.blue {
 }
 .signup-link{
     display: flex;
+    text-decoration: none;
     justify-content: center;
     align-items: center;
     background-color: var(--color-primary);

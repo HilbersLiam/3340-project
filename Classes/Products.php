@@ -4,6 +4,7 @@ class Products extends Dbh
 {
     private $products = [];
 
+    // Function to get the products
     public function get_products()
     {
         $query = "SELECT * FROM products";
@@ -14,7 +15,7 @@ class Products extends Dbh
 
         return $this->products;
     }
-
+    // Function to display the products based on the category
     public function display_products($category)
     {
         $products = $this->get_products();
